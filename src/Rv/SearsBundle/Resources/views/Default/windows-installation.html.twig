@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textboxinner">
+	<p class="free1">The Window</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+    <div class="windowinfo">
+        <h2 class="infopage  wow fadeInLeft">Home Window Installation - Let us do all the work</h2>
+    </div>
+
+<div class="plainback4">	
+<div class="container wow fadeIn">
+	<div class="row row2">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6" id="professional">
+            <h2 class="headerlong">{{ render(controller('RvSearsBundle:Default:loadTitle', {'pageId':'windowsinstallation'} )) }}</h2>
+    		<div class='inbetween header'>{{ render(controller('RvSearsBundle:Default:loadContent', {'pageId':'windowsinstallation'} )) }}</div>
+        </div>
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main2">
+            {{ render(controller('RvSearsBundle:Default:loadSecondaryContent', {'pageId':'windowsinstallation'} )) }}			
+        </div>		
+     </div>
+  </div>
+</div>
+
+<div class="newsection7">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox">
+				<div class="bene">{{ render(controller('RvSearsBundle:Default:loadThirdContent', {'pageId':'windowsinstallation'} )) }}</div>
+				<div class="benefittext">{{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId':'windowsinstallation'} )) }} </div>
+				
+			</div>
+	</div>
+</div>
+</div>
+
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src={{ asset("img/phoneicon.png") }}>Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+</div>
+
+
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>I absolutely love my new windows! They are energy efficient and beautiful! Your sales and installation men are excellent! They have made my home much more comfortable, enjoyable and attractive. I really appreciate the Sears products and service.<br>
+        <br>-A Sears satisfied and happy customer, Columbia, SC</p>
+    </div>
+    <div class="col-md-6">
+        <p>I had all my windows (25) installed. I must say that Anthony’s crew was phenomenal. They worked diligently and consistently in an effort to complete this big job in one day and were able to accomplish it.<br>
+        <br>-A Sears satisfied and happy customer, Hempstead, NY</p>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textbox2">
+	<h3 class="header2">18 MONTHS</h3>
+	<p class="free">SPECIAL FINANCING</p>
+	<h3 class="smallprint">on home improvement purchases over $1500 with a qualifying Sears card. Offer good through 4/30/16.</h3>
+	</div>
+	</div>
+	
+	<div class="container wow fadeInRight">
+	<div id= "textbox">
+	<p class="free">The Home Improvement</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+	
+<div class="background5">
+</div>
+
+<div class="windowbar wow fadeInLeft">
+	<h3 class="window"><img src="{{ asset('img/dooricon.png') }}">Doors</h3>
+</div>
+
+<div class="plainback">	
+<div class="container wow fadeIn">
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<h3>{{ render(controller('RvSearsBundle:Default:loadTitle', {'pageId': 'doors'} )) }}</h3>
+				<div class='main2'>{{ render(controller('RvSearsBundle:Default:loadContent' , {'pageId': 'doors'} )) }}<br></div>
+				
+    	</div>
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main2">
+				{{ render(controller('RvSearsBundle:Default:loadSecondaryContent' , {'pageId': 'doors'} )) }}
+			
+				
+		</div>
+  		</div>
+		</div>
+	</div>
+</div>
+
+<div class="blockquote4 wow fadeIn">
+	<div class="blockquote-content text-center">
+		<hr>
+			<p>Sears offers</p><br>
+			<p><span class="sears-name">HOMEOWNERS</span></p><br>
+			<p>the widest selction in <span class="sears-name">DOORS</span></p>
+		<hr>
+	</div>
+</div>
+
+<div class="newsection">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox bene benefittext">
+				{{ render(controller('RvSearsBundle:Default:loadThirdContent' , {'pageId': 'doors'} )) }}
+			</div>
+	</div>
+</div>
+</div>
+
+
+
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src="{{ asset('img/phoneicon.png') }}">Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+</div>
+
+
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>Just a note to let you know that you have a great crew! The guys were extremely professional. We really enjoyed having them here and would recommend them to any of our neighbors who need windows! 
+Thank you kindly,  <br>
+        <br>-A Sears satisfied and happy customer, Sacramento, CA</p>
+    </div>
+    <div class="col-md-6">
+        <p>I am writing you to express my extreme satisfaction with the installation of the vinyl siding on my house. Peter and Violet Swider did a beautiful job installing the siding, soffit and faascia. They were delightful to work with and I conssider them true craftsman. <br>
+        <br>-A Sears satisfied and happy customer, Longmont, CO</p>
+    </div>
+</div>
+
+
+{% endblock %}

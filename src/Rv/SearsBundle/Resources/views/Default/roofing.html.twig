@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textbox2">
+	<h3 class="header2">18 MONTHS</h3>
+	<p class="free">SPECIAL FINANCING</p>
+	<h3 class="smallprint">on home improvement purchases over $1500 with a qualifying Sears card. Offer good through 4/30/16.</h3>
+	</div>
+	</div>
+	
+<div class="container wow fadeInRight">
+	<div id= "textbox">
+	<p class="free">The Roofing</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+
+	
+<div class="background3">
+</div>
+
+<div class="windowbar wow fadeInLeft">
+	<h3 class="window"><img src="{{ asset('img/roofingicon.png') }}">Roofing</h3>
+</div>
+
+	
+<div class="blockquote2 wow fadeIn">
+	<div class="blockquote-content text-center">
+		<hr>
+			<p>Residential <span class="sears-name">ROOF</span></p><br>
+			<p>replacement with </p><br>
+			<p><span class="sears-name">SEARS</span></p>
+		<hr>
+	</div>
+</div>
+
+<div class="plainbacknew">	
+<div class="container wow fadeIn">
+	<div class="row row2">
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main3">				
+   				{{ render(controller('RvSearsBundle:Default:loadThirdContent', {'pageId': 'roofing'} )) }}
+   		</div>
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main3">
+				{{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId': 'roofing'} )) }}
+		</div>
+     </div>
+</div>
+</div>
+
+<div class="newsection2">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox">
+				<div class="bene">{{ render(controller('RvSearsBundle:Default:loadContent', {'pageId':'roofing'} )) }}</div>
+				<div class="benefittext">{{ render(controller('RvSearsBundle:Default:loadSecondaryContent',{'pageId':'roofing'} )) }}</div>
+			</div>
+                
+	</div>
+</div>
+</div>
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src="{{ asset('img/phoneicon.png') }}">Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+            
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends '::admin.html.twig' %}
+
+{% block body -%}
+    <h1>CMS</h1>
+    
+    <div class="cms-links" >
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </div>
+        
+        </br>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Page ID: </th>
+                <td>{{ entity.pageId }}</td>
+            </tr>
+            <tr>
+                <th>Page Title: </th>
+                <td>{{ entity.pageTitle }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ entity.content }}</td>
+            </tr>
+            <tr>
+                <th>Secondary Content</th>
+                <td>{{ entity.secondaryContent }}</td>
+            </tr>
+            <tr>
+                <th>Third Content</th>
+                <td>{{ entity.thirdContent }}</td>
+            </tr>
+            <tr>
+                <th>Fourth Content</th>
+                <td>{{ entity.fourthContent }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li class="cms-links" >
+        <a href="{{ path('cms') }}">
+            Back to the list
+        </a>
+    </li>
+    <li class="cms-links" >
+        <a href="{{ path('cms_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

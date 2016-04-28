@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textboxinner">
+	<p class="free">The Kitchen Remodeling</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+ <div class="cabinet">
+        <h2 class="infopage wow fadeInLeft">{{ render(controller('RvSearsBundle:Default:loadTitle', {'pageId':'kitchencabinet'} )) }}</h2>
+ </div>
+
+
+<div class="plainbacknew">	
+<div class="container wow fadeIn">
+	<div class="row row2">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main3">
+			{{ render(controller('RvSearsBundle:Default:loadContent', {'pageId':'kitchencabinet'} )) }}
+        </div>
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main3">
+           	{{ render(controller('RvSearsBundle:Default:loadSecondaryContent', {'pageId':'kitchencabinet'} )) }}
+        </div>		
+     </div>
+  </div>
+</div>
+
+<div class="newsection16">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox">
+				<div class="bene">{{ render(controller('RvSearsBundle:Default:loadThirdContent', {'pageId':'kitchencabinet'} )) }}</div>
+				<div class="benefittext">{{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId':'kitchencabinet'} )) }}</div>
+
+				
+				
+			</div>
+	</div>
+</div>
+</div>
+
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src={{ asset("img/phoneicon.png") }}>Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+</div>
+
+
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>We chose the oak cabinets with the arch design. Jeremy Knibbs installed them and not only are the cabinets beautiful, they really exceeded our expectations. I was never much of a cook, but I’m getting excited about my kitchen and using it. <br>
+        <br>-A Sears satisfied and happy customer,  Tampa, FL</p>
+    </div>
+    <div class="col-md-6">
+        <p>Our two installers, Jamison and Rob were the best! They arrived on time, left the areas clean, answered all questions and completed the job within the timeframe they gave us. This experience we definitely would cause us to consider Sears again. <br>
+        <br>-A Sears satisfied and happy customer, Plymouth, MA</p>
+    </div>
+</div>
+{% endblock %}

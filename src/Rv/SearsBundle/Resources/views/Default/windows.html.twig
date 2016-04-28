@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textbox2">
+	<h3 class="header2">18 MONTHS</h3>
+	<p class="free">SPECIAL FINANCING</p>
+	<h3 class="smallprint">on home improvement purchases over $1500 with a qualifying Sears card. Offer good through 4/30/16.</h3>
+	</div>
+	</div>
+	
+<div class="container wow fadeInRight">
+	<div id= "textbox">
+	<p class="free1">The Window</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+
+	
+<div class="background2">
+</div>
+
+<div class="windowbar wow fadeInLeft">
+	<h3 class="window"><img src="{{ asset('img/windowicon.png') }}">Windows</h3>
+</div>
+	
+<div class="blockquote wow FadeIn">
+	<div class="blockquote-content text-center">
+		<hr>
+			<p>Save <span class="sears-name">ENERGY</span></p>
+			<p>and get an updated look with</p>
+			<p>replacement windows from</p>
+			<p><span class="sears-name">SEARS</span></p>
+		<hr>
+	</div>
+</div>
+
+<div class="plainbacknew">	
+<div class="container wow fadeIn">
+	<div class="row row2">
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main3">				
+   				{{ render(controller('RvSearsBundle:Default:loadContent', {'pageId': 'windows'} )) }}
+   		</div>
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main3">
+				{{ render(controller('RvSearsBundle:Default:loadSecondaryContent', {'pageId': 'windows'} )) }}
+		</div>
+     </div>
+	</div>
+      </div>
+      
+<div class="newsection">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox">
+				<div class='bene'>{{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId': 'windows'} )) }} </div>
+				<div class="benefittext">{{ render(controller('RvSearsBundle:Default:loadThirdContent', {'pageId': 'windows'} )) }}</div>
+			</div>
+	</div>
+</div>
+</div>
+
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src="{{ asset('img/phoneicon.png') }}">Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+</div>
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>I had replacement windows done by Sears, and could not be more pleased. I’ve already seen an improvement in my gas bill, and I’m sure I’ll see a big improvement in my electric bill this summer. <br>
+        <br>-A Sears satisfied and happy customer, Dallas, TX</p>
+    </div>
+    <div class="col-md-6">
+        <p>I love my new windows and the great job that was done by the installers. They were very precise installing the windows and left my home just as clean as they found it. I’m very satisfied and would recommend Sears to anyone. <br>
+        <br>-A Sears satisfied and happy customer, Milwaukee, WI</p>
+    </div>
+</div>
+
+{% endblock %}

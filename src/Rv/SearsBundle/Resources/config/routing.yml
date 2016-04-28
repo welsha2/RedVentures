@@ -1,0 +1,4 @@
+rv_sears_cms_category:
+    resource: "@RvSearsBundle/Resources/config/routing/category.yml"
+    prefix:   /cms/category
+

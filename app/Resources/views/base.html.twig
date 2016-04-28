@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %} {% endblock %}
+        <meta charset="UTF-8" />
+        <title>{% block title %}Sears Home Improvement{% endblock %}</title>
+        <link href="{{ asset('css/style.css') }}" type="css" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap.min.css') }}" type="css" rel="stylesheet">
+        <link href="{{ asset('sss/sss.css') }}" type="css" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap.customs.css') }}" type="css" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap-responsive.min.css') }}" media="all" rel="stylesheet" />
+        <link href="{{ asset('css/animate.css') }}" type="css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('sss/sss.min.js') }}"></script>
+        <script src="{{ asset('sss/sss.js') }}"></script>
+        <script src="{{ asset('js/animate.js') }}"></script>
+        <script type="javescript"> new WOW().init(); </script>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+         <div class="container-fluid">
+        <div class="navbar-header">
+      <ul class="nav navbar-nav navbar-right">
+          
+        <li><a href="{{ path('home') }}">Home</a></li>
+       <a class="navbar-sears" href="{{ path('home')}}"><img class="logo" src="{{ asset('img/sears_logo.jpg') }}"></a>
+    </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="{{ path('windows')}}">Windows</a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" href="{{ path('windows-productselection')}}">Product Selection</a></li>
+                  <li><a tabindex="-1" href="{{ path('windows-installation')}}">Installation</a></li>
+      </ul>
+            <li class="dropdown-submenu">
+                <a tabindex="-1" href="{{ path('heatingandcooling')}}">Heating & Cooling</a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" href="{{ path('heatingandcooling-installation')}}">Installation</a></li>
+      </ul>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="{{ path('siding')}}">Siding</a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" href="{{ path('siding-productselection')}}">Product Selection</a></li>
+                  <li><a tabindex="-1" href="{{ path('siding-installation')}}">Installation</a></li>
+                  <li><a tabindex="-1" href="{{ path('siding-customize')}}">Customize your Siding</a></li>  
+      </ul>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="{{ path('kitchen')}}">Kitchens</a>
+                <ul class="dropdown-menu">
+                 <li><a tabindex="-1" href="{{ path('kitchen-remodel')}}">Kitchen Remodeling</a></li>
+                 <li><a tabindex="-1" href="{{ path('kitchen-cabinet')}}">Cabinet Refacing</a></li>
+                 <li><a tabindex="-1" href="{{ path('kitchen-countertop')}}">Countertop Replacement</a></li>
+                 <li><a tabindex="-1" href="{{ path('kitchen-installation')}}">Installation</a></li>   
+      </ul>
+               <li class="dropdown-submenu">
+                <a tabindex="-1" href="{{ path('bathrooms')}}">Bathrooms</a>
+                <ul class="dropdown-menu">
+                 <li><a tabindex="-1" href="{{ path('bathroom-installation')}}">Installation</a></li> 
+      </ul>
+                <li class="dropdown-submenu">
+                <a tabindex="-1" href="{{ path('doors')}}">Doors</a>
+                <ul class="dropdown-menu">
+                 <li><a tabindex="-1" href="{{ path('doors-exterior')}}">Exterior Doors</a></li> 
+                 <li><a tabindex="-1" href="{{ path('doors-garage')}}">Garage Doors</a></li> 
+                 <li><a tabindex="-1" href="{{ path('doors-installation')}}">Installation</a></li>   
+      </ul>
+                <li class="dropdown-submenu">
+                <a tabindex="-1" href="{{ path('roofing')}}">Roofing</a>
+                <ul class="dropdown-menu">
+                 <li><a tabindex="-1" href="{{ path('roofing-options')}}">Roofing Options</a></li>  
+                 <li><a tabindex="-1" href="{{ path('roofing-installation')}}">Installation</a></li>   
+      </ul>
+    
+    
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div class="phone">
+ +      <h4>Call now! 1-877-275-4193</h4>
+    </div>
+</nav>
+
+        {% block body %}
+        {% endblock %}
+        {% block javascripts %}
+        {% endblock %}
+        <div id="footer" class="wow fadeIn">
+        <div class="wrap">
+           <ul>
+  			      <li><a href="{{ path('terms-download') }}" class="footerhead">Terms of Use</a></li>
+  		      	<li><a href="{{ path('liscense-download') }}">Liscense Information</a></li>
+  	      		<li><a href="{{ path('satisfaction-download') }}">Satisfaction Guarantee</a></li>
+  			      <li><a href="{{ path('privacy-download') }}">Privacy Policy</a></li>
+			      </ul>
+        </div>
+        <div class="wrap2">
+            <ul>
+ 			        <li><a href="{{ path('windows') }}">Windows </a><span class="bullet"> •</span></li>
+              <li><a href="{{ path('heatingandcooling') }}">Heating & Cooling </a><span class="bullet"> •</span></li>
+              <li><a href="{{ path('siding') }}">Siding </a><span class="bullet"> •</span></li>
+              <li><a href="{{ path('kitchen') }}">Kitchens </a><span class="bullet"> •</span></li>
+              <li><a href="{{ path('bathrooms') }}">Bathrooms </a><span class="bullet"> •</span></li>
+              <li><a href="{{ path('doors') }}">Doors </a><span class="bullet"> •</span></li>
+              <li><a href="{{ path('roofing') }}">Roofing </a></li>
+			      </ul>
+        </div>
+</div>
+    </body>
+</html>
+
+

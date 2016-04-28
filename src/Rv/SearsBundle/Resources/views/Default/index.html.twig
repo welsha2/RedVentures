@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="headertext wow fadeInRight" id="headertext">
+	<h1 class="improve" id="improve">The Home Improvement Experts</h1>
+	<h2 class="modern" id="modern">Modern Solutions from a Trusted Brand</h2>
+</div>
+
+<div class="container wow fadeInRight" data-wow-delay=".5s">
+	<div id="textbox3" class="text-right">
+	<h3 class="header1" id="call-now">CALL NOW</h3>
+	<p class="header1" id="consultation">for a free consultation</p>
+	<h3 class="header1" id="call-number">1-877-275-4193</h3>
+	<h3 class="calltoaction"><a href="#form">Make an Appointment with Us Today!</a></h3>
+	</div>
+	</div>
+
+<div class="background" id="background"></div>
+
+
+
+<div class="first-section wow fadeIn" id="first-section">	
+<div class="container">
+	<div class="row">
+		<div class="col-md-5" id="headline">
+   			     <h2>{{ render(controller('RvSearsBundle:Default:loadTitle', {'pageId': 'home'} )) }}</h2>
+    			 {{ render(controller('RvSearsBundle:Default:loadSecondaryContent', {'pageId': 'home'} )) }}
+    	</div>
+		<div class="col-md-7 main" id="headline-content">
+				{{ render(controller('RvSearsBundle:Default:loadContent', {'pageId': 'home'} )) }}
+  			</div>
+  		</div>
+		</div>
+	</div>
+</div>
+  
+<div class="second-section wow fadeIn" id="form">	
+	<div class="container">
+		<div>
+					{{ render( controller("RvSearsBundle:Form:new")) }}		
+		</div>
+	<div>
+</div>
+</div>
+
+<div class="third-section wow fadeIn">
+	<div class="container">
+		<div class="row">
+			<div id="bar">
+				<h2 class="categories"><img class="categories-icon" src="{{ asset('img/cateogories-icon.png') }}">CATEGORIES</h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="photos">
+  	<a href="{{ path('windows')}}"><img class="photo-effect wow fadeIn" src={{ asset("img/windowcategorypic.png") }}><h3 class="windowlabel">WINDOWS</h3></a>
+ 	<a href="{{ path('siding')}}"><img class="photo-effect wow fadeIn" src={{ asset("img/siding-categories.jpg") }}><h3 class="windowlabel">SIDING</h3></a>
+ 	<a href="{{ path('bathrooms')}}"><img class="photo-effect wow fadeIn" src={{ asset("img/bathroom-categories.jpg") }}><h3 class="windowlabel">BATHROOMS</h3></a>
+ 	<a href="{{ path('roofing')}}"><img class="photo-effect wow fadeIn" src={{ asset("img/roof-categories2.jpg") }}><h3 class="windowlabel">ROOFING</h3></a>
+ 	<a href="{{ path('heatingandcooling')}}"><img class="photo-effect wow fadeIn" src={{ asset("img/heat-cool-categories.jpg") }}><h3 class="windowlabel">HEATING & COOLING</h3></a>
+ 	<a href="{{ path('kitchen')}}"><img class="photo-effect wow fadeIn" src={{ asset("img/kitchen-categories.jpg") }}><h3 class="windowlabel">KITCHEN</h3></a>
+ 	<a href="{{ path('doors')}}"><img class="photo-effect wow fadeIn" src={{ asset("img/doors-categories.jpg") }}><h3 class="windowlabel">DOORS</h3></a>
+ 	<div id="call-today" class="text-center">
+ 		<h3>Call us today!</h3>
+ 		<p>FOR YOUR <span id="index-free">FREE</span></p>
+ 		<p>IN HOME DESIGN CONSULTATION</p>
+ 	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    
+    <script src="{{ asset('sss/sss.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('sss/sss.css') }}" type="text/css" media="all">
+
+    
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textbox2">
+	<h3 class="header2">18 MONTHS</h3>
+	<p class="free">SPECIAL FINANCING</p>
+	<h3 class="smallprint">on home improvement purchases over $1500 with a qualifying Sears card. Offer good through 4/30/16.</h3>
+	</div>
+	</div>
+
+<div class="container wow fadeInRight">
+	<div id= "textbox">
+	<p class="free">The Home Improvement</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+	
+<div class="background6">
+</div>
+
+
+<div class="windowbar wow fadeInLeft">
+	<h3 class="window"><img src="{{ asset('img/bathroomicon.png') }}">Bathrooms</h3>
+</div>
+
+<div class="plainbacknew">	
+<div class="container wow fadeIn">
+	<div class="row row2">
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main2">				
+   				 {{ render(controller('RvSearsBundle:Default:loadContent', {'pageId': 'bathrooms'} )) }}</div>
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main2">
+			     {{ render(controller('RvSearsBundle:Default:loadSecondaryContent', {'pageId': 'bathrooms'} )) }}</div>
+  		</div>
+		</div>
+	</div>
+</div>
+
+	
+<div class="blockquote5 wow fadeIn">
+	<div class="blockquote-content text-center">
+		<hr>
+			<p>Homeowners everywhere</p><br>
+			<p>choose <span class="sears-name">SEARS</span> for</p><br>
+			<p>Bathroom Remodeling Services</p>
+		<hr>
+	</div>
+</div>
+
+<div class="newsection4">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox">
+				<div class="bene"> {{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId': 'bathrooms'} )) }} </div>
+				<div class="benefittext"> {{ render (controller('RvSearsBundle:Default:loadThirdContent', {'pageId': 'bathrooms'} )) }} </div>
+			</div>
+	</div>
+</div>
+</div>
+
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src="{{ asset('img/phoneicon.png') }}">Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+</div>
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>Sears, Thanks for more than we can say. Bless you for being so caring, thoughtful and going out of your way to help make our job a pleasant experience.<br>
+        <br>-A Sears satisfied and happy customer, Charleston</p>
+    </div>
+    <div class="col-md-6">
+        <p>Just a note to let you know that you have a great crew! The guys were extremely professional. We really enjoyed having them here and would recommend them to any of our neighbors who need windows! 
+Thank you kindly, <br>
+        <br>-A Sears satisfied and happy customer, Sacramento, CA</p>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+        <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textboxinner">
+	<p class="free">The Heating & Cooling</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+<div class="heatingcoolinginfo">
+<h2 class="infopage wow fadeInLeft">Heating & Cooling Installation</h2>
+</div>
+
+<div class="plainback4">	
+<div class="container wow fadeIn">
+	<div class="row row2">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6" id="professional">
+            <h2 class="headerlong">{{ render(controller('RvSearsBundle:Default:loadTitle', {'pageId':'heatingandcoolinginstallation'} )) }}</h2>
+    			 <div class="inbetween header">{{ render(controller('RvSearsBundle:Default:loadContent', {'pageId':'heatingandcoolinginstallation'} )) }}</div>
+        </div>
+		<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 main3">
+            {{ render(controller('RvSearsBundle:Default:loadSecondaryContent', {'pageId':'heatingandcoolinginstallation'} )) }}			
+        </div>		
+     </div>
+  </div>
+</div>
+
+<div class="newsection9">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox">
+				<div class="bene">{{ render(controller('RvSearsBundle:Default:loadThirdContent', {'pageId':'heatingandcoolinginstallation'} )) }}</div>
+				<div class="benefittext">{{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId':'heatingandcoolinginstallation'} )) }}</div>
+                    
+				
+			</div>
+	</div>
+</div>
+</div>
+
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src= {{ asset("img/phoneicon.png") }}>Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+</div>
+
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>Your level of professionalism and service is impeccable. You truly took ownership of the challenge of satisfying our family’s heating needs. Your level of service is exemplary and should be emulated by all people providing customer service. <br>
+        <br>-A Sears satisfied and happy customer, Detroit, MI</p>
+    </div>
+    <div class="col-md-6">
+        <p>From the first person of contact to the last, my purchase experience at Sears has been nothing less than outstanding! They are professional, knowledgeable, helpful and accommodating. <br>
+        <br>-A Sears satisfied and happy customer, Butler, PA</p>
+    </div>
+</div>
+
+{% endblock %}

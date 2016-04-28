@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textboxinner">
+	<p class="free">The Kitchen</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+ <div class="cabinet">
+        <h2 class="infopage wow fadeInLeft">Create a Kitchen You'll Love with a Countertop Replacement from Sears</h2>
+    </div>
+    
+<div class="newsection17">	
+	<div class="container wow fadeIn">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+				<div class="whitebox">
+				<div class="bene">{{ render(controller('RvSearsBundle:Default:loadThirdContent', {'pageId':'kitchencountertop'} )) }}</div>
+				<div class="benefittext">{{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId':'kitchencountertop'} )) }}</div>
+
+				
+				
+			</div>
+	</div>
+</div>
+</div>
+
+<div class="callnowsection wow fadeIn">
+			<h3 class="callfirst"><img src={{ asset("img/phoneicon.png") }}>Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">and let our Sears design consultants help you.</h3>
+</div>
+
+
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>Our two installers, Jamison and Rob were the best! They arrived on time, left the areas clean, answered all questions and completed the job within the timeframe they gave us. This experience we definitely would cause us to consider Sears again. <br>
+        <br>-A Sears satisfied and happy customer, Plymouth, MA
+
+</p>
+    </div>
+    <div class="col-md-6">
+        <p>I recently had Sears reface my kitchen cabinets and now my kitchen looks like it’s out of a magazine. People who had seen my kitchen before the re-facing say they cannot believe how gorgeous and how much better it now looks.<br>
+        <br>-A Sears satisfied and happy customer, Trumball, CT</p>
+    </div>
+</div>
+{% endblock %}

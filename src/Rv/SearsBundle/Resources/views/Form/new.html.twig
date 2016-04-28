@@ -1,0 +1,65 @@
+
+{{ form_start(form) }}
+
+<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 inbetween">
+	<p>Simply fill out the form below and WE WILL CALL YOU to discuss your FREE in-home design consultation options.</p>
+	<br><br>
+    <div>
+        {{ form_label(form.firstName, '*First Name: ') }}<br>
+        {{ form_errors(form.firstName) }}
+        {{ form_widget(form.firstName) }}
+    </div>
+    <br>
+    <div>
+        {{ form_label(form.lastName, '*Last Name: ') }}<br>
+        {{ form_errors(form.lastName) }}
+        {{ form_widget(form.lastName) }}
+    </div>
+    <br>
+    <div>
+        {{ form_label(form.phoneNumber, '*Phone: (ex. 1-222-3333) ') }}<br>
+        {{ form_errors(form.phoneNumber) }}
+        {{ form_widget(form.phoneNumber) }}
+    </div>
+    <br>
+    <div>
+        {{ form_label(form.altPhone, 'Alt. Phone: (ex. 1-222-3333) ') }}<br>
+        {{ form_errors(form.altPhone) }}
+        {{ form_widget(form.altPhone) }}
+    </div>
+    <br>
+    <div>
+        {{ form_label(form.zipCode, '*Zip Code: (ex. 00000) ') }}<br>
+        {{ form_errors(form.zipCode) }}
+        {{ form_widget(form.zipCode) }}
+    </div>
+</div>
+<div class="col-xs-12 col-sm-8 col-md-7 col-lg-6">
+    <br><br><br><br><br><br><br>
+    <div>
+        {{ form_label(form.productInterest, 'Product Interested In: ') }}
+        {{ form_errors(form.productInterest) }}
+        {{ form_widget(form.productInterest) }}
+    </div>
+    <br>
+    <div>
+        {{ form_label(form.apptTime, 'Desired Appointment Time: ' ) }}<br>
+        {{ form_errors(form.apptTime) }}
+        {{ form_widget(form.apptTime) }}
+    </div>
+    <br>
+    <div>
+        {{ form_label(form.apptDate, 'Desired Appointment Date: ') }}<br>
+        {{ form_errors(form.apptDate) }}
+        {{ form_widget(form.apptDate) }}
+    </div>
+    <br>
+    <div>
+        {{ form_label(form.submit, 'SUBMIT') }}
+        {{ form_widget(form.submit,  {'attr': {'class': 'button'}} ) }}
+    </div>
+</div>
+
+{{ form_end(form) }}
+
+

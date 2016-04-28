@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container wow fadeInRight">
+	<div id= "textbox2">
+	<h3 class="header2">18 MONTHS</h3>
+	<p class="free">SPECIAL FINANCING</p>
+	<h3 class="smallprint">on home improvement purchases over $1500 with a qualifying Sears card. Offer good through 4/30/16.</h3>
+	</div>
+	</div>
+
+<div class="container wow fadeInRight">
+	<div id= "textbox">
+	<p class="free">The Heating and Cooling</p>
+	<h3 class="header3">EXPERTS</h3>
+	</div>
+	</div>
+
+
+    <button class="deals wow fadeIn">Find Deals on HVAC in your area</button>
+   
+	
+<div class="background8">
+</div>
+
+<div class="windowbar wow fadeInLeft">
+	<h3 class="window"><img src="{{ asset('img/heatingandcoolingicon.png') }}">Heating & Cooling</h3>
+</div>
+
+
+<div class="whiteblock">
+<div class="container">
+<div class="row row2">
+	<div class="inbetween col-xs-12 col-sm-8 col-md-7 col-lg-6">
+		<p>Heating and air conditioning is one of the most important investments you’ll make in your home. If you’ve every suffered through a broken heating system in the middle of winter, or a broken air conditioning system in the dog days of summer, you know why. As your system ages, it loses its ability to efficiently heat and cool your home. If your system is 10 years or older, it may be time for a replacement.</p>
+	</div>
+	<div class="inbetween col-xs-12 col-sm-8 col-md-7 col-lg-6">
+		<p>Sears offers a full line of top brands like Kenmore® and Carrier®, which have proven records of reliability and energy cost savings. </p>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="plainbacknewer">	
+<div class="container wow fadeIn">
+	<div class="row row2">
+		<div class="col-sm-4 heading1 main2">
+				<h1>{{ render(controller('RvSearsBundle:Default:loadTitle', {'pageId':'heatingandcooling'} )) }}</h1>
+				<p><br>From determining what type of HVAC system to buy, to figuring out which accessories work best for your home, there’s a lot to consider. Sears takes the headache out of your search by offering a full range of heating and cooling products all in one location. These include:
+                <br>
+        </div>
+         <div class="col-sm-4 heading1 main2">       
+   				{{ render(controller('RvSearsBundle:Default:loadContent', {'pageId':'heatingandcooling'} )) }}
+        </div>
+        <div class="col-sm-4 heading1 main2"> 
+                {{ render(controller('RvSearsBundle:Default:loadSecondaryContent', {'pageId':'heatingandcooling'} )) }}
+    	</div>
+		<div class="col-sm-4 heading1 main2">
+				{{ render(controller('RvSearsBundle:Default:loadThirdContent', {'pageId':'heatingandcooling'} )) }}
+       </div>
+       <div class="col-sm-4 heading1 main2"> 
+               {{ render(controller('RvSearsBundle:Default:loadFourthContent', {'pageId':'heatingandcooling'} )) }}
+        </div>
+		</div>
+  		</div>
+		</div>
+	</div>
+</div>
+
+ </div>
+</div>
+      
+<div class="blockquote7">
+</div>
+
+<div class="callnowsection2">
+			<h3 class="callfirst"><img src={{ asset("img/phoneicon.png") }}>Call 1-877-275-4193 today</h3>
+			<h3 class="callsecond">for your FREE In-Home Design Consultation.</h3>
+</div>
+
+<div class="row testimonials">
+    <div class="col-md-6 testimonials-left">
+        <p>From the first person of contact to the last, my purchase experience at Sears has been nothing less than outstanding! They are professional, knowledgeable, helpful and accommodating. <br>
+        <br>-A Sears satisfied and happy customer, Butler, PA</p>
+    </div>
+    <div class="col-md-6">
+        <p>Your level of professionalism and service is impeccable. You truly took ownership of the challenge of satisfying our family’s heating needs. Your level of service is exemplary and should be emulated by all people providing customer service. 
+ <br>
+        <br>-A Sears satisfied and happy customer, Des Moines, IA</p>
+    </div>
+</div>
+
+
+{% endblock %}

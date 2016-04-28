@@ -1,0 +1,94 @@
+{% extends '::admin.html.twig' %}
+
+{% block body -%}
+    <h1>Form list</h1>
+    
+    <div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+    </div>
+        
+        </br>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Id</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>First Name</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Last Name</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Phonenumber</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Alternative Phone</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Zipcode</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Appointment Date</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Appointment Time</th>
+                <th>&nbsp;&nbsp;&nbsp;</th>
+                <th>Product Interest</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td><a href="{{ path('appointments_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ entity.firstName }}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ entity.lastName }}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ entity.phoneNumber }}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ entity.altPhone }}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ entity.zipCode }}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{% if entity.apptDate %}{{ entity.apptDate|date('m-d-Y') }}{% endif %}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{{ entity.apptTime }}</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+                <td>{% for productInterest in entity.productInterest %} {{productInterest}},  {% endfor %}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('appointments_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('appointments_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+ <ul class="record_actions">
+    <li>    
+        <a href="{{ path('cms') }}">
+            Back to CMS
+        </a>
+    </li>
+</ul>
+
+{#        <ul>
+        <li>
+            <a href="{{ path('appointments_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul> #}
+    
+    {% endblock %}
